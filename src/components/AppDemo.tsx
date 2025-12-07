@@ -49,8 +49,8 @@ export function AppDemo() {
               fill="none"
               stroke="white"
               strokeWidth={3}
-              strokeLinecap="round"
-              strokeLinejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               variants={outlineVariants}
             />
             <motion.path

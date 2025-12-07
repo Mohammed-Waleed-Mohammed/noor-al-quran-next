@@ -253,7 +253,7 @@ export default function Orb({
       const uvY = ((y - centerY) / size) * 2.0
 
       targetHover = Math.hypot(uvX, uvY) < 0.8 ? 1 : 0
-    }
+      }
 
     const handleMouseLeave = () => {
       targetHover = 0

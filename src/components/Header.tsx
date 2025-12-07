@@ -11,6 +11,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 import { Container } from '@/components/Container'
 import { AnimatedLogomark } from '@/components/AnimatedLogomark'
+import { AndroidApkLink } from '@/components/AndroidApkLink'
 import { NavLinks } from '@/components/NavLinks'
 import { PlayStoreLink } from '@/components/PlayStoreLink'
 
@@ -123,6 +124,11 @@ export function Header() {
                             <PlayStoreLink
                               href="#"
                               className="w-full justify-center"
+                              variant="compact"
+                            />
+                            <AndroidApkLink
+                              className="w-full justify-center"
+                              variant="compact"
                             />
                           </div>
                         </PopoverPanel>
@@ -132,8 +138,16 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <div className="hidden items-center gap-6 lg:flex">
-              <PlayStoreLink href="#" />
+            <div className="hidden items-center gap-4 lg:flex">
+              <PlayStoreLink
+                href="#"
+                variant="compact"
+                className="w-40 justify-center"
+              />
+              <AndroidApkLink
+                variant="compact"
+                className="w-40 justify-center"
+              />
             </div>
           </div>
         </Container>

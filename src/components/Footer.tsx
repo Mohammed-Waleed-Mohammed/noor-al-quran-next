@@ -74,8 +74,8 @@ export function Footer() {
           </form>
           <div className="mt-6 flex flex-col items-center gap-2 text-sm text-gray-500 md:mt-0 md:flex-row md:gap-4">
             <p>
-              &copy; Copyright {new Date().getFullYear()}. All rights reserved.
-            </p>
+            &copy; Copyright {new Date().getFullYear()}. All rights reserved.
+          </p>
             <Link
               href="/privacy"
               className="font-semibold text-gray-600 transition-colors hover:text-[#6b4fd1] focus-visible:outline-hidden"

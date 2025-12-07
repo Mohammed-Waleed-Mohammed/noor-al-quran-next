@@ -1,5 +1,7 @@
 import { useId } from 'react'
+
 import { AppDemo } from '@/components/AppDemo'
+import { AndroidApkLink } from '@/components/AndroidApkLink'
 import { Container } from '@/components/Container'
 import { PhoneFrame } from '@/components/PhoneFrame'
 import { PlayStoreLink } from '@/components/PlayStoreLink'
@@ -88,7 +90,10 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function Hero() {
   return (
-    <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <section
+      id="hero"
+      className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36"
+    >
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
@@ -101,7 +106,8 @@ export function Hero() {
               inside Noor Al-Quran.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-              <PlayStoreLink href="#" />
+              <PlayStoreLink href="#" className="w-56 justify-center" />
+              <AndroidApkLink className="w-56 justify-center" />
             </div>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
@@ -118,6 +124,6 @@ export function Hero() {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   )
 }

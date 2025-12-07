@@ -31,7 +31,7 @@ export function CallToAction() {
             downloading recitations within seconds.
           </p>
           <div className="mt-8 flex justify-center">
-            <Button href="/register" color="white">
+            <Button href="/#hero" color="white">
               Get Noor Al-Quran
             </Button>
           </div>
