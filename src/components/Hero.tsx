@@ -107,7 +107,10 @@ export function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <PlayStoreLink href="#" className="w-56 justify-center" />
-              <AndroidApkLink className="w-56 justify-center" />
+              <AndroidApkLink
+                href="/noor-al-quran.apk"
+                className="w-56 justify-center"
+              />
             </div>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">

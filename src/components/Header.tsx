@@ -127,6 +127,7 @@ export function Header() {
                               variant="compact"
                             />
                             <AndroidApkLink
+                              href="/noor-al-quran.apk"
                               className="w-full justify-center"
                               variant="compact"
                             />
@@ -145,6 +146,7 @@ export function Header() {
                 className="w-40 justify-center"
               />
               <AndroidApkLink
+                href="/noor-al-quran.apk"
                 variant="compact"
                 className="w-40 justify-center"
               />
