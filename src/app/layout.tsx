@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nooralquran.app'),
   title: {
     template: '%s · Noor Al-Quran',
-    default: 'Noor Al-Quran · Listen to the Quran anytime, anywhere.',
+    default: 'Noor Al-Quran · Recite, reflect, and stay connected.',
   },
   description:
-    'Noor Al-Quran lets you stream, download, and share beautiful Quran recitations with smart reminders, offline access, and curated playlists.',
+    'Noor Al-Quran is the modern Quran recitation companion with curated reciters, AI-assisted playlists, offline downloads, and gentle prayer reminders for every moment.',
   keywords: [
     'Noor Al-Quran',
     'Quran app',
@@ -25,20 +25,22 @@ export const metadata: Metadata = {
     'Islamic app',
     'Offline Quran',
     'Prayer reminders',
+    'Quran playlists',
+    'Muslim app',
   ],
   authors: [{ name: 'Noor Al-Quran' }],
   openGraph: {
     title: 'Noor Al-Quran · Your companion for daily recitation',
     description:
-      'Stream, download, and share Quran recitations with Noor Al-Quran. Enjoy curated playlists, offline listening, and smart reminders on any device.',
+      'Stream calming recitations, save offline favorites, and stay on track with smart reminders in the Noor Al-Quran app.',
     url: '/',
     siteName: 'Noor Al-Quran',
     images: [
       {
-        url: '/icon1.png',
-        width: 512,
-        height: 512,
-        alt: 'Noor Al-Quran logo',
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Noor Al-Quran hero preview',
       },
     ],
     locale: 'en_US',
@@ -46,10 +48,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Noor Al-Quran · Listen to the Quran anytime, anywhere',
+    title: 'Noor Al-Quran · Recite on any schedule',
     description:
-      'The Noor Al-Quran app delivers high-quality recitations, offline downloads, and prayer-time reminders. Perfect for daily listening and family sharing.',
-    images: ['/icon1.png'],
+      'A beautifully crafted Quran recitation app with curated reciters, offline downloads, and mindful reminders.',
+    images: ['/twitter-image'],
   },
   icons: {
     icon: [
