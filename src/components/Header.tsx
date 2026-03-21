@@ -122,7 +122,7 @@ export function Header() {
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
                             <PlayStoreLink
-                              href="#"
+                              href="https://play.google.com/store/apps/details?id=com.qurannoor.app"
                               className="w-full justify-center"
                               variant="compact"
                             />
@@ -141,7 +141,7 @@ export function Header() {
             </Popover>
             <div className="hidden items-center gap-4 lg:flex">
               <PlayStoreLink
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.qurannoor.app"
                 variant="compact"
                 className="w-40 justify-center"
               />

@@ -76,8 +76,8 @@ export default function TwitterImage() {
                 maxWidth: 640,
               }}
             >
-              A modern Quran companion with curated reciters, favorites, and
-              gentle reminders that keep you inspired.
+              A free Quran companion with 13 reciters, live radio, daily Athkar,
+              offline downloads, and listening stats.
             </p>
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function TwitterImage() {
             letterSpacing: 0.4,
           }}
         >
-          {['Trusted reciters', 'Offline ready', 'Mindful reminders'].map(
+          {['13 Reciters', 'Offline ready', '30+ Radio stations'].map(
             (feature) => (
               <div
                 key={feature}

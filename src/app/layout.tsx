@@ -14,25 +14,27 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nooralquran.app'),
   title: {
     template: '%s · Noor Al-Quran',
-    default: 'Noor Al-Quran · Recite, reflect, and stay connected.',
+    default: 'Noor Al-Quran · Listen to the Quran anytime, anywhere.',
   },
   description:
-    'Noor Al-Quran is the modern Quran recitation companion with curated reciters, AI-assisted playlists, offline downloads, and gentle prayer reminders for every moment.',
+    'Noor Al-Quran is a comprehensive Quran listening app featuring 13 renowned reciters, offline downloads, live radio stations, Athkar, sleep timer, and bilingual Arabic-English support.',
   keywords: [
     'Noor Al-Quran',
     'Quran app',
     'Quran recitation',
     'Islamic app',
     'Offline Quran',
-    'Prayer reminders',
-    'Quran playlists',
+    'Quran radio',
+    'Athkar',
     'Muslim app',
+    'Quran reciters',
+    'Quran audio',
   ],
   authors: [{ name: 'Noor Al-Quran' }],
   openGraph: {
     title: 'Noor Al-Quran · Your companion for daily recitation',
     description:
-      'Stream calming recitations, save offline favorites, and stay on track with smart reminders in the Noor Al-Quran app.',
+      'Listen to 13 world-renowned reciters, download surahs for offline listening, tune into live Quran radio, and track your listening habits — all for free.',
     url: '/',
     siteName: 'Noor Al-Quran',
     images: [
@@ -48,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Noor Al-Quran · Recite on any schedule',
+    title: 'Noor Al-Quran · 13 Reciters, Offline Downloads, Live Radio',
     description:
-      'A beautifully crafted Quran recitation app with curated reciters, offline downloads, and mindful reminders.',
+      'A beautifully crafted Quran listening app with 13 reciters, offline downloads, 30+ radio stations, Athkar, and listening stats — completely free.',
     images: ['/twitter-image'],
   },
   icons: {

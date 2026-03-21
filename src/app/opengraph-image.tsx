@@ -76,8 +76,8 @@ export default function OpenGraphImage() {
                 maxWidth: 640,
               }}
             >
-              Curated reciters, offline playlists, and mindful reminders in one
-              beautifully crafted mobile experience.
+              13 world-renowned reciters, offline downloads, 30+ live radio
+              stations, and daily Athkar — completely free.
             </p>
           </div>
         </div>
@@ -91,8 +91,8 @@ export default function OpenGraphImage() {
         >
           {[
             'Offline downloads',
-            'Favorites & playlists',
-            'Prayer-time cues',
+            '13 Reciters',
+            '30+ Radio stations',
           ].map((feature) => (
             <div
               key={feature}

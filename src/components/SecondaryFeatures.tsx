@@ -4,39 +4,39 @@ import { Container } from '@/components/Container'
 
 const features = [
   {
-    name: 'Listen offline',
+    name: 'Offline downloads',
     description:
-      'Save surahs and playlists so you’re never without the Quran, even when traveling.',
+      'Download individual surahs or entire reciter catalogs and listen without an internet connection.',
     icon: DeviceArrowIcon,
   },
   {
-    name: 'Curated reciters',
+    name: '13 renowned reciters',
     description:
-      'Browse handpicked reciters and audio sources for every style of recitation.',
+      'Listen to Al-Afasy, Abdul Basit, Al-Muaiqly, As-Sudais, Al-Ghamdi, and more — with multiple recitation styles.',
     icon: DeviceCardsIcon,
   },
   {
-    name: 'Real-time streaming',
+    name: '30+ live radio stations',
     description:
-      'High-quality audio streaming with adaptive bitrate for smooth playback.',
+      'Tune into Quran radio, Tafseer, Fatwas, and Islamic lectures from stations around the world.',
     icon: DeviceClockIcon,
   },
   {
-    name: 'Family playlists',
+    name: 'Daily Athkar',
     description:
-      'Follow your loved ones’ playlists or share your own recitation list.',
+      'Explore 50+ supplications with Arabic text and audio for morning, evening, sleep, and travel.',
     icon: DeviceListIcon,
   },
   {
     name: 'Secure & private',
     description:
-      'Your listening habits stay on your device; no tracking or intrusive ads.',
+      'Your listening habits stay on your device. No tracking, no ads, no data collection whatsoever.',
     icon: DeviceLockIcon,
   },
   {
-    name: 'Progress tracking',
+    name: 'Listening statistics',
     description:
-      'Mark listened ayahs, continue where you stopped, and resume sessions easily.',
+      'Track your daily, weekly, and all-time listening habits to build a consistent recitation routine.',
     icon: DeviceChartIcon,
   },
 ]
@@ -196,11 +196,11 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Build a recitation routine that travels with you.
+            Everything you need for your daily recitation.
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            Noor Al-Quran keeps your playlists, favorites, and offline downloads
-            in sync so you can listen anywhere.
+            Noor Al-Quran brings together reciters, radio, Athkar, offline
+            downloads, and listening stats in one beautifully crafted app.
           </p>
         </div>
         <ul

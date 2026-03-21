@@ -101,12 +101,12 @@ export function Hero() {
               Listen to the Quran anytime, anywhere.
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              Stream beautiful recitations from trusted reciters, explore
-              curated playlists, and download surahs for offline listening—all
-              inside Noor Al-Quran.
+              Stream beautiful recitations from 13 world-renowned reciters,
+              download surahs for offline listening, tune into 30+ live radio
+              stations, and explore daily Athkar — all inside Noor Al-Quran.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-              <PlayStoreLink href="#" className="w-56 justify-center" />
+              <PlayStoreLink href="https://play.google.com/store/apps/details?id=com.qurannoor.app" className="w-56 justify-center" />
               <AndroidApkLink
                 href="/noor-al-quran.apk"
                 className="w-56 justify-center"

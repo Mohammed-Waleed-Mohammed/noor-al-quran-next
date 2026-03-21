@@ -30,21 +30,21 @@ const features = [
   {
     name: 'Curated Reciters Library',
     description:
-      'Discover a beautifully organized catalog of renowned qaris, complete with portraits, sources, and audio styles. Filter, browse, and jump into any recitation with a tap.',
+      'Browse 13 world-renowned reciters including Mishary Al-Afasy, Abdul Basit, Maher Al-Muaiqly, and more. Each reciter offers multiple recitation styles — Mujawwad, Murattal, and teaching modes.',
     icon: DeviceUserIcon,
     screen: RecitersLibraryScreen,
   },
   {
     name: 'Favorites at Your Fingertips',
     description:
-      'Pin beloved reciters and surahs to your Favorites tab for instant playback. Noor Al-Quran remembers your last session so you resume exactly where you left off.',
+      'Pin your beloved reciters and surahs to your Favorites tab for instant playback. Noor Al-Quran remembers your last session so you resume exactly where you left off.',
     icon: DeviceNotificationIcon,
     screen: FavoritesScreen,
   },
   {
     name: 'Offline Downloads, Anywhere',
     description:
-      'Save full surahs or curated playlists for moments without internet access—commutes, flights, remote trips. No buffering, just pure recitation.',
+      'Download individual surahs or entire reciter catalogs for offline listening. Perfect for commutes, flights, and remote trips — no buffering, just pure recitation.',
     icon: DeviceTouchIcon,
     screen: OfflineScreen,
   },
@@ -253,7 +253,7 @@ function OfflineScreen(props: ScreenProps) {
     <FeatureImageScreen
       {...props}
       title="Offline downloads"
-      subtitle="Sync playlists for commutes, flights, and trips."
+      subtitle="Download surahs for commutes, flights, and trips."
       src="/offline.png"
       alt="Offline downloads screen for Noor Al-Quran."
     />

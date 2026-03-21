@@ -27,8 +27,8 @@ export function CallToAction() {
             Bring the Quran into every moment.
           </h2>
           <p className="mt-4 text-lg text-gray-300">
-            Download Noor Al-Quran, create your library, and start streaming or
-            downloading recitations within seconds.
+            Download Noor Al-Quran for free — 13 reciters, 30+ radio stations,
+            50+ Athkar, offline downloads, and so much more.
           </p>
           <div className="mt-8 flex justify-center">
             <Button href="/#hero" color="white">

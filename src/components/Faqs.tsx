@@ -5,66 +5,66 @@ const faqs = [
     {
       question: 'How many reciters are available?',
       answer:
-        'We add new reciters regularly. You can submit requests through in-app feedback so we know who to prioritize.',
+        'Noor Al-Quran features 13 world-renowned reciters including Mishary Al-Afasy, Abdul Basit, Maher Al-Muaiqly, Abdurrahman As-Sudais, Saad Al-Ghamdi, and more — many with multiple recitation styles like Mujawwad, Murattal, and teaching modes.',
     },
     {
       question: 'Can I listen offline?',
       answer:
-        'Yes, download individual surahs or entire playlists and listen without an internet connection.',
+        'Yes. Download individual surahs or entire reciter catalogs to your device. You can manage your downloads, track progress, and listen without any internet connection.',
     },
     {
       question: 'Is the app free?',
       answer:
-        'Core features are free. Optional subscriptions help us cover hosting costs and bring new recitations to Noor Al-Quran.',
+        'Noor Al-Quran is completely free — no subscriptions, no in-app purchases, no ads. Every feature is available to all users at no cost.',
     },
     {
-      question: 'What audio quality do you provide?',
+      question: 'What are the radio stations?',
       answer:
-        'High-quality 128 kbps MP3 is the default, with adaptive bitrate options for slower networks.',
+        'The app includes 30+ live radio stations streaming Quran recitations, Tafseer (interpretation), Fatwas, Islamic lectures, and Prophet biography channels from trusted sources worldwide.',
     },
   ],
   [
     {
-      question: 'Will you add translations?',
+      question: 'What are Athkar?',
       answer:
-        'Yes, translations and tafsir audio are on our roadmap. Join our newsletter for updates.',
+        'Athkar are Islamic supplications for daily life. The app includes 50+ Athkar with Arabic text and audio — covering morning, evening, sleep, travel, prayer, and more.',
     },
     {
       question: 'How do I report an issue?',
       answer:
-        'Use the in-app Support tab or email support@nooralquran.app and our team will reply quickly.',
+        'Email us at support@nooralquran.app and our team will reply as quickly as possible.',
     },
     {
       question: 'Is my data private?',
       answer:
-        'We don’t sell or share personal listening data. See our privacy policy in the app for full details.',
+        'Absolutely. Noor Al-Quran collects no personal data whatsoever. All your favorites, downloads, and listening history stay entirely on your device.',
     },
     {
       question: 'What devices are supported?',
       answer:
-        'Noor Al-Quran is available on Android (Play Store) and coming soon to iOS.',
+        'Noor Al-Quran is available on Android via the Google Play Store and as a direct APK download. iOS support is coming soon.',
     },
   ],
   [
     {
-      question: 'Can families share playlists?',
+      question: 'Does the app support Arabic and English?',
       answer:
-        'Yes, invite family members to follow your playlists or upgrade to the Family plan for shared libraries.',
+        'Yes. The entire app is fully bilingual with Arabic and English interfaces, including full RTL (right-to-left) support for Arabic.',
     },
     {
-      question: 'How often do you add new recitations?',
+      question: 'What playback features are available?',
       answer:
-        'We publish new reciters and curated playlists every week based on community requests.',
+        'You can adjust playback speed (0.5x to 2.0x), set repeat modes (single surah or all), use a sleep timer (10–60 minutes), save bookmarks, and access an audio equalizer on Android.',
     },
     {
-      question: 'Do you offer prayer-time reminders?',
+      question: 'Does the app track my listening?',
       answer:
-        'Smart reminders can alert you before salah or when new recitations from your favorite qaris are released.',
+        'Yes, locally. The app tracks your daily, weekly, and all-time listening statistics — all stored on your device, never sent anywhere.',
     },
     {
       question: 'Can I use Noor Al-Quran while traveling?',
       answer:
-        'Absolutely. Download surahs ahead of time or use adaptive streaming for smooth playback on slow connections.',
+        'Absolutely. Download surahs before your trip for offline listening, or stream directly. The app also supports background playback with notification controls.',
     },
   ],
 ]
