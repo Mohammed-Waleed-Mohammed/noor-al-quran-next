@@ -103,7 +103,7 @@ export function Hero() {
             <p className="mt-6 text-lg text-gray-600">
               Stream beautiful recitations from 13 world-renowned reciters,
               download surahs for offline listening, tune into 30+ live radio
-              stations, and explore daily Athkar — all inside Noor Al-Quran.
+              stations, and explore daily Athkar — all inside Noor Al-Quran. (Version 1.3.0 , TV Layout)
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <PlayStoreLink href="https://play.google.com/store/apps/details?id=com.qurannoor.app" className="w-56 justify-center" />
