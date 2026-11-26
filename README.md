@@ -1,71 +1,64 @@
-# Noor Al-Quran – Marketing Experience
+# Noor Al-Quran — website
 
-Noor Al-Quran is a reimagined version of the Pocket landing page template, now focused on promoting a Quran recitation companion app. The site blends premium Tailwind CSS styling with motion, rich media, and long-form storytelling to highlight features such as curated reciters, offline listening, and privacy-first design.
+Marketing site and privacy policy for the Noor Al-Quran Android app
+(`com.qurannoor.app`). Arabic-first (RTL) with English, in the app's
+**Moonlit Indigo** brand.
 
-## Tech Stack
+## Stack
 
-- [Next.js 14 / App Router](https://nextjs.org/docs/app) with Server Components
-- [React 19](https://react.dev/)
-- [TypeScript 5.8](https://www.typescriptlang.org/)
-- [Tailwind CSS 4 (experimental)](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/) for SVG/logo animations
-- [Headless UI](https://headlessui.com/) for Tabs, Popovers, etc.
-
-## Getting Started
-
-> We use **Yarn** for all project commands.
+Next.js 15 (App Router) · React 19 · Tailwind CSS 4 · TypeScript · Yarn.
+Animated pieces come from [React Bits](https://www.reactbits.dev) and live in
+`src/components/reactbits/` (LightRays, Galaxy, BlurText, ShinyText,
+SpotlightCard, StarBorder, TiltedCard, CountUp). They respect
+`prefers-reduced-motion`; the WebGL backdrops load lazily and are skipped
+entirely when reduced motion is on (`src/components/Ambient.tsx`).
 
 ```bash
-# Install dependencies
 yarn install
-
-# Start the local dev server
-yarn dev
-
-# Visit the app
-open http://localhost:3000
+yarn dev      # http://localhost:3000
+yarn build
 ```
 
-### Useful Scripts
+## Routes
 
-| Command             | Description                                  |
-| ------------------- | -------------------------------------------- |
-| `yarn dev`          | Run the development server with HMR          |
-| `yarn build`        | Create an optimized production build         |
-| `yarn start`        | Serve the production build on Node.js        |
-| `yarn lint`         | Run ESLint (select Base/Strict on first run) |
-| `yarn tsc --noEmit` | Type-check the project without emitting JS   |
+| Arabic (default)  | English              |                                                              |
+| ----------------- | -------------------- | ------------------------------------------------------------ |
+| `/`               | `/en`                | Home                                                         |
+| `/privacy`        | `/en/privacy`        | Privacy policy — Google Play links `/privacy`; keep that URL |
+| `/delete-account` | `/en/delete-account` | Account deletion (Google Play requirement)                   |
 
-## Project Structure
+Each language has its own root layout (`src/app/(ar)`, `src/app/(en)`) so
+`<html lang dir>` is right; unknown URLs hit `src/app/global-not-found.tsx`.
 
-- `src/app` – App Router routes (`(main)`, `privacy`, error views, metadata)
-- `src/components` – Reusable UI (hero, features, orb background, logos, etc.)
-- `src/styles/tailwind.css` – Tailwind config + global styles (brand palettes, animations)
-- `public/` – Icons, favicons, marketing imagery (`noor-logo.svg`, `noor-icon.svg`, `logo-mark-outline.svg`, feature PNGs)
+## Where things live
 
-## Customization Tips
+- `src/i18n/home.ts`, `src/i18n/privacy.ts` — all copy, ar + en. Every claim is
+  checked against the app source; keep it that way. When the app's data
+  handling changes, update `privacy.ts` **and** `PRIVACY_UPDATED` in
+  `src/lib/site.ts`.
+- `src/lib/site.ts` — site URL, store/APK links, contact email.
+- `src/lib/catalog.ts` — live reciter count from the MP3Quran API (weekly ISR).
+- `src/styles/tailwind.css` — palette tokens mirroring the app's
+  `lib/theme/app_palette.dart`. No gold or warm brand colours.
+- `src/fonts/` — Cairo, Tajawal, Poppins (the files the app bundles). Arabic
+  text must use Cairo/Tajawal; Poppins has no Arabic glyphs.
 
-- **Branding**: Update the SVG assets in `public/` and tweak brand colors via CSS variables inside `src/styles/tailwind.css`.
-- **Sections**: Each homepage section lives in its own component (Hero, PrimaryFeatures, SecondaryFeatures, Reviews, CallToAction, Footer) for quick editing.
-- **Motion**: `src/components/AnimatedLogomark.tsx` and `AppDemo.tsx` hold Framer Motion logic for SVG path animations. Adjust easing, delays, or replace with static assets as needed.
-- **Privacy & Legal**: The privacy policy is a standalone route at `src/app/privacy/page.tsx`. Update the content to reflect your data policies.
+## Brand assets
 
-## Deployment
+The logo is a hand-drawn vector of the app's mihrab mark in `src/lib/mark.ts`
+(React component: `src/components/NoorMark.tsx`). Raster assets are rendered
+from it at their exact size, never downscaled from another raster:
 
-1. Generate a production build:
+```bash
+yarn brand:og      # public/og/og-{ar,en}.png
+yarn brand:icons   # favicon.ico, icon.svg, apple-icon.png, manifest icons
+```
 
-   ```bash
-   yarn build
-   ```
+## Screenshots
 
-2. Start the Node.js server (ideal for platforms like Vercel, Netlify, Render):
+`src/components/home/Showcase.tsx` shows branded placeholders until real,
+unframed device screenshots are added to its `SCREENSHOTS` map.
 
-   ```bash
-   yarn start
-   ```
+## Deploy
 
-For static export or custom hosting, refer to the [Next.js deployment guide](https://nextjs.org/docs/app/building-your-application/deploying).
-
-## License
-
-This project started from the commercial Tailwind Plus “Pocket” template. Ensure your usage complies with the [Tailwind Plus license](https://tailwindcss.com/plus/license).
+`main` deploys to production on Netlify. Work on a branch.
