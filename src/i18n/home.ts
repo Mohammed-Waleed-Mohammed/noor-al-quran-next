@@ -20,7 +20,15 @@ type Dict = {
   meta: { title: string; description: string; ogTagline: string }
   nav: { features: string; app: string; faq: string; privacy: string; menu: string; close: string }
   langSwitch: { label: string; target: string }
-  cta: { play: string; playEyebrow: string; apk: string; apkHint: string }
+  cta: {
+    play: string
+    playEyebrow: string
+    apk: string
+    apkHint: string
+    iosEyebrow: string
+    iosTitle: string
+    iosCompact: string
+  }
   hero: { eyebrow: string; title: string; lead: string; scroll: string }
   features: {
     eyebrow: string
@@ -33,6 +41,7 @@ type Dict = {
     title: string
     lead: string
     pending: string
+    shotAlt: string
     screens: { key: string; title: string }[]
   }
   numbers: {
@@ -78,6 +87,9 @@ const ar: Dict = {
     playEyebrow: 'متوفر على',
     apk: 'تنزيل ملف APK',
     apkHint: 'لأجهزة أندرويد دون متجر Google Play',
+    iosEyebrow: 'على آيفون وآيباد',
+    iosTitle: 'افتح نور القرآن',
+    iosCompact: 'افتح التطبيق',
   },
   hero: {
     eyebrow: 'رفيقك اليومي مع كتاب الله',
@@ -137,6 +149,7 @@ const ar: Dict = {
     title: 'تصميم ليلي هادئ يريح العين',
     lead: 'ألوان النيلي وضوء القمر في كل شاشة، في الوضع الداكن والفاتح.',
     pending: 'لقطة الشاشة قريبًا',
+    shotAlt: 'صورة من تطبيق نور القرآن',
     screens: [
       { key: 'home', title: 'الرئيسية' },
       { key: 'player', title: 'المشغّل' },
@@ -194,7 +207,7 @@ const ar: Dict = {
       },
       {
         q: 'على أي الأجهزة يعمل؟',
-        a: 'على أجهزة أندرويد، من متجر Google Play أو بتنزيل ملف APK مباشرة من هذا الموقع.',
+        a: 'على أجهزة أندرويد من متجر Google Play أو بتنزيل ملف APK من هذا الموقع، وعلى آيفون وآيباد كتطبيق ويب تضيفه إلى شاشتك الرئيسية من Safari.',
       },
       {
         q: 'كيف أحذف حسابي؟',
@@ -239,6 +252,9 @@ const en: Dict = {
     playEyebrow: 'Get it on',
     apk: 'Download the APK',
     apkHint: 'For Android devices without Google Play',
+    iosEyebrow: 'On iPhone & iPad',
+    iosTitle: 'Open Noor Al-Quran',
+    iosCompact: 'Open the app',
   },
   hero: {
     eyebrow: 'Your daily companion with the Quran',
@@ -298,6 +314,7 @@ const en: Dict = {
     title: 'A calm, night-sky design that is easy on the eyes',
     lead: 'Indigo and moonlight on every screen, in dark and light themes.',
     pending: 'Screenshot coming soon',
+    shotAlt: 'Noor Al-Quran app screenshot',
     screens: [
       { key: 'home', title: 'Home' },
       { key: 'player', title: 'Player' },
@@ -355,7 +372,7 @@ const en: Dict = {
       },
       {
         q: 'Which devices are supported?',
-        a: 'Android phones, through Google Play or by downloading the APK directly from this site.',
+        a: 'Android, through Google Play or the APK on this site; and iPhone and iPad as a web app you add to your home screen from Safari.',
       },
       {
         q: 'How do I delete my account?',

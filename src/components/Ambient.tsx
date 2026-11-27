@@ -10,7 +10,7 @@ import { useReducedMotion } from 'framer-motion'
 // carries the look on its own.
 
 const LightRays = dynamic(() => import('@/components/reactbits/LightRays'), { ssr: false })
-const Galaxy = dynamic(() => import('@/components/reactbits/Galaxy'), { ssr: false })
+const Aurora = dynamic(() => import('@/components/reactbits/Aurora'), { ssr: false })
 
 function useNearViewport<T extends Element>() {
   const ref = useRef<T>(null)
@@ -82,32 +82,36 @@ export function MoonRays({ className }: { className?: string }) {
   )
 }
 
-export function StarField({ className }: { className?: string }) {
+/**
+ * Soft moonlit aurora behind the closing call to action. Its edges are masked
+ * so it melts into the sections around it; skipped in data-saver mode.
+ */
+export function MoonAurora({ className }: { className?: string }) {
   const reduce = useReducedMotion()
   const [ref, near] = useNearViewport<HTMLDivElement>()
   const [allowed, setAllowed] = useState(false)
   useEffect(() => setAllowed(!saveData()), [])
   return (
-    <div ref={ref} aria-hidden="true" className={className}>
+    <div
+      ref={ref}
+      aria-hidden="true"
+      className={className}
+      style={{
+        maskImage: 'linear-gradient(to bottom, transparent, black 22%, black 65%, transparent)',
+        WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 22%, black 65%, transparent)',
+      }}
+    >
       {near && allowed && !reduce && (
-        <Galaxy
-          transparent
-          intro={false}
-          density={0.5}
-          starSpeed={0.02}
-          speed={0.15}
-          flareIntensity={0.35}
-          starSize={0.8}
-          layers={3}
-          rotationSpeed={0.02}
-          glowIntensity={0.25}
-          twinkleIntensity={0.4}
-          saturation={0}
+        <Aurora
+          colorStops={['#1F2A5A', '#7C8CE0', '#3A4799']}
+          amplitude={0.8}
+          blend={0.6}
+          speed={0.35}
+          height={0.5}
+          glow={0.5}
+          brightness={0.75}
           mouseInteraction={false}
-          mouseRepulsion={false}
-          clickWarp={false}
-          starColors={['#E6E8EF', '#BFD3F5', '#7C8CE0']}
-          dpr={1.5}
+          intro={false}
         />
       )}
     </div>

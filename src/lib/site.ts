@@ -8,6 +8,11 @@ export const SITE_URL = 'https://nooralquran.netlify.app'
 export const PLAY_URL =
   'https://play.google.com/store/apps/details?id=com.qurannoor.app'
 
+/** The web app (PWA). iPhone/iPad visitors are sent here instead of the
+ *  stores; `install=1` makes it open its add-to-home-screen steps. */
+export const PWA_URL = 'https://quran-noor-app.netlify.app/'
+export const PWA_INSTALL_URL = `${PWA_URL}?install=1`
+
 /** Direct sideload download. Version-agnostic on purpose. */
 export const APK_URL = '/noor-al-quran.apk'
 

@@ -8,7 +8,7 @@ Marketing site and privacy policy for the Noor Al-Quran Android app
 
 Next.js 15 (App Router) · React 19 · Tailwind CSS 4 · TypeScript · Yarn.
 Animated pieces come from [React Bits](https://www.reactbits.dev) and live in
-`src/components/reactbits/` (LightRays, Galaxy, BlurText, ShinyText,
+`src/components/reactbits/` (LightRays, Aurora, BlurText, ShinyText,
 SpotlightCard, StarBorder, TiltedCard, CountUp). They respect
 `prefers-reduced-motion`; the WebGL backdrops load lazily and are skipped
 entirely when reduced motion is on (`src/components/Ambient.tsx`).

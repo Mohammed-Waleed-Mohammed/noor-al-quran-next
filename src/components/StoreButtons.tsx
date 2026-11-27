@@ -1,34 +1,52 @@
 'use client'
 
+import { useSyncExternalStore } from 'react'
 import clsx from 'clsx'
-import { FaAndroid, FaGooglePlay } from 'react-icons/fa'
+import { FaAndroid, FaApple, FaGooglePlay } from 'react-icons/fa'
 
 import StarBorder from '@/components/reactbits/StarBorder'
 import { homeDict } from '@/i18n/home'
-import { APK_URL, PLAY_URL, type Locale } from '@/lib/site'
+import { APK_URL, PLAY_URL, PWA_INSTALL_URL, type Locale } from '@/lib/site'
+
+// iPhone/iPad visitors can't use Google Play or the APK, so on iOS the store
+// buttons send them to the web app instead, with `?install=1` so it opens
+// straight onto its add-to-home-screen steps. Pages are static, so this is
+// decided in the browser (the server render shows the Android buttons).
+const noop = () => () => {}
+function detectIos() {
+  const ua = navigator.userAgent
+  return /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)
+}
+export function useIsIos() {
+  return useSyncExternalStore(noop, detectIos, () => false)
+}
 
 export function PlayButton({ locale, compact = false }: { locale: Locale; compact?: boolean }) {
   const t = homeDict[locale].cta
+  const ios = useIsIos()
+  const href = ios ? PWA_INSTALL_URL : PLAY_URL
+  const BrandIcon = ios ? FaApple : FaGooglePlay
+
   // The compact header button is always on screen, so it stays static; the
   // animated StarBorder is kept for in-page CTAs, which pause off-screen.
   if (compact)
     return (
       <a
-        href={PLAY_URL}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={href}
+        {...(ios ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
         className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-ice/25 bg-navy px-3.5 py-2 text-on-night transition-colors hover:border-ice/50"
       >
-        <FaGooglePlay aria-hidden="true" className="text-base" />
-        <span className="font-latin text-sm font-semibold">{t.play}</span>
+        <BrandIcon aria-hidden="true" className="text-base" />
+        <span className={clsx('text-sm font-semibold', !ios && 'font-latin')}>
+          {ios ? t.iosCompact : t.play}
+        </span>
       </a>
     )
   return (
     <StarBorder
       as="a"
-      href={PLAY_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={href}
+      {...(ios ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
       color="#BFD3F5"
       trailColor="#7C8CE0"
       backgroundColor="#1F2A5A"
@@ -40,19 +58,19 @@ export function PlayButton({ locale, compact = false }: { locale: Locale; compac
       hover="lap"
       className="shrink-0 px-5! py-3!"
     >
-      <FaGooglePlay aria-hidden="true" className="text-2xl" />
+      <BrandIcon aria-hidden="true" className="text-2xl" />
       <span className="flex flex-col items-start leading-tight">
-        <span className="text-[0.7rem] text-on-night-soft">{t.playEyebrow}</span>
-        <span className="font-latin text-lg font-semibold">
-          {t.play}
-        </span>
+        <span className="text-[0.7rem] text-on-night-soft">{ios ? t.iosEyebrow : t.playEyebrow}</span>
+        <span className={clsx('text-lg font-semibold', !ios && 'font-latin')}>{ios ? t.iosTitle : t.play}</span>
       </span>
     </StarBorder>
   )
 }
 
+/** Direct APK download — Android only, so hidden on iPhone/iPad. */
 export function ApkLink({ locale, className }: { locale: Locale; className?: string }) {
   const t = homeDict[locale].cta
+  if (useIsIos()) return null
   return (
     <a
       href={APK_URL}
